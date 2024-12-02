@@ -74,7 +74,7 @@ app.post("/hourofcode/register", async (req, res) => {
     console.log(encryptedData)
     const decryptedData = CryptoJS.AES.decrypt(
       encryptedData,
-      "6Lcnio4qAAAAAADtlgyZX9jYQBSFL8VSppL9LPQX"
+      recapchaSecretKey
     ).toString(CryptoJS.enc.Utf8);
     const decryptedDataJSON = JSON.parse(decryptedData);
     // console.log(decryptedDataJSON);
